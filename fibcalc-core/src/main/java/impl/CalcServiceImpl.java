@@ -1,13 +1,15 @@
 package impl;
 
+import rest.impl.CalcResult;
 import rest.impl.CalcService;
 
 public class CalcServiceImpl implements CalcService {
 
 	@Override
-	public Result fibonacci(int n) {
+	public CalcResult fibonacci(int n) {
 		
-		return Result.fibonacci(6);
+		int result_fibonacci = Result.fibonacci(n);		
+		return new CalcResult().withNum(n).withFibonacci(result_fibonacci);
 	}
-
+	
 }

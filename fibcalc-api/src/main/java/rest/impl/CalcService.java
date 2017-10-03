@@ -11,9 +11,9 @@ import javax.ws.rs.core.MediaType;
 public interface CalcService {
 	
 	@GET
-	@Path("/fib")
+	@Path("/fib/{num}")
 	@Produces(MediaType.APPLICATION_JSON)
-	Result fibonacci(@QueryParam("num") int n);
-	
+	CalcResult fibonacci(@QueryParam("num") int n);
+
 }
 
